@@ -13,6 +13,14 @@ var channel = "518026871695212564";//ايدي الروم
     },305);
 })
 
+client.on('message',function(message) {
+    let prefix = "2";
+let args = message.content.split(" ").slice(1).join(" ");
+if(message.content.startsWith(prefix + "say")) {
+if(!args) return;
+message.channel.send(`**# ${args}**`); 
+}
+});
 
 
 
